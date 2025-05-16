@@ -18,50 +18,47 @@ Este proyecto utiliza una red neuronal LSTM (Long Short-Term Memory) optimizada 
       
       Se crean secuencias de datos para el entrenamiento del modelo.
 
-Definición del Modelo LSTM:
+## Definición del Modelo LSTM:
 
-La clase BitcoinLSTM define la arquitectura de la red LSTM, incluyendo capas LSTM y una capa lineal para la salida.
+- La clase BitcoinLSTM define la arquitectura de la red LSTM, incluyendo capas LSTM y una capa lineal para la salida.
 
-Optimización con Optuna:
+## Optimización con Optuna:
 
-La función objective define el proceso de entrenamiento y evaluación del modelo para cada conjunto de hiperparámetros propuestos por Optuna.
+- La función objective define el proceso de entrenamiento y evaluación del modelo para cada conjunto de hiperparámetros propuestos por Optuna.
 
-Se utiliza la técnica de "poda" (pruning) para descartar combinaciones de hiperparámetros poco prometedoras.
+- Se utiliza la técnica de "poda" (pruning) para descartar combinaciones de hiperparámetros poco prometedoras.
 
-Entrenamiento y Evaluación:
+## Entrenamiento y Evaluación:
 
-Se entrena el modelo con los mejores hiperparámetros encontrados.
+- Se entrena el modelo con los mejores hiperparámetros encontrados.
 
-Se evalúa el modelo en el conjunto de validación y se visualizan los resultados.
+- Se evalúa el modelo en el conjunto de validación y se visualizan los resultados.
 
-Uso
-Ejecución del Código:
+## Uso
+- Ejecución del Código:
 
-El código está diseñado para ejecutarse en Google Colab, pero puede adaptarse para ejecutarse localmente.
+                  El código está diseñado para ejecutarse en Google Colab, pero puede adaptarse para ejecutarse localmente.
+                  
+                  Asegúrate de tener el archivo de datos (btcusd_1-min_data.csv) en la ruta especificada.
 
-Asegúrate de tener el archivo de datos (btcusd_1-min_data.csv) en la ruta especificada.
+## Personalización:
 
-Personalización:
+- Modifica los rangos de hiperparámetros en la función objective para ajustar la búsqueda según tus necesidades.
 
-Modifica los rangos de hiperparámetros en la función objective para ajustar la búsqueda según tus necesidades.
+- Cambia el número de trials (n_trials) en study.optimize para aumentar o reducir la exploración del espacio de hiperparámetros.
 
-Cambia el número de trials (n_trials) en study.optimize para aumentar o reducir la exploración del espacio de hiperparámetros.
+## Resultados
+- El proyecto genera un gráfico que compara los valores reales del precio de Bitcoin con las predicciones del modelo. Además, se imprimen los mejores hiperparámetros encontrados durante la optimización.
 
-Resultados
-El proyecto genera un gráfico que compara los valores reales del precio de Bitcoin con las predicciones del modelo. Además, se imprimen los mejores hiperparámetros encontrados durante la optimización.
-
-Ejemplo de Salida
-🔍 Mejores hiperparámetros:
-{
-    'seq_len': 30,
-    'hidden_size': 64,
-    'num_layers': 2,
-    'dropout': 0.2,
-    'lr': 0.001,
-    'batch_size': 64
-}
-Contribuciones
+## Ejemplo de Salida
+                  🔍 Mejores hiperparámetros:
+                  {
+                      'seq_len': 30,
+                      'hidden_size': 64,
+                      'num_layers': 2,
+                      'dropout': 0.2,
+                      'lr': 0.001,
+                      'batch_size': 64
+                  }
+## Contribuciones
 Las contribuciones son bienvenidas. Si encuentras algún error o tienes sugerencias para mejorar el modelo, no dudes en abrir un issue o enviar un pull request.
-
-Licencia
-Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
