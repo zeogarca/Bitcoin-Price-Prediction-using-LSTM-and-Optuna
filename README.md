@@ -60,5 +60,10 @@ Este proyecto utiliza una red neuronal LSTM (Long Short-Term Memory) optimizada 
                       'lr': 0.001,
                       'batch_size': 64
                   }
+## Resultados
+
+![image](https://github.com/user-attachments/assets/8d9f4868-9c13-4225-b0ce-0ba1464bf4d0)
+
+
 ## Contribuciones
 Las contribuciones son bienvenidas. Si encuentras algún error o tienes sugerencias para mejorar el modelo, no dudes en abrir un issue o enviar un pull request.
