@@ -49,8 +49,8 @@ def objective(trial):
         lr = trial.suggest_float('lr', 1e-4, 1e-2, log=True)
         batch_size = trial.suggest_categorical('batch_size', [32, 64, 128])
 
-        train_ds = BTC_ds(T[:-1000], seq_len)
-        valid_ds = BTC_ds(T[-1000 - seq_len:], seq_len)
+        # train_ds = BTC_ds
+        # valid_ds = BTC_ds
 
         print(f"Trial params: seq_len={seq_len}, hidden_size={hidden_size}, dropout={dropout:.3f}, lr={lr:.5f}, batch_size={batch_size}")
         print(f"Train size: {len(train_ds)}, Valid size: {len(valid_ds)}")
